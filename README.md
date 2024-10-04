@@ -4,6 +4,34 @@ only Supports OrangeFox   12.1 / 11
 ```
 ![cap_sprout](https://wiki.orangefox.tech/banner.svg)
 ---
+# Features
+Auto updates in background/
+Installing old releases/
+Ability to create and edit OpenRecoveryScripts/
+Beautiful UI/
+No analytics/ads, small apk size/
+Internal Storage (Yes, decryption works!)/
+External Storage (Both OTG and MicroSD.)/
+Touchpanel/
+Brightness/
+Vibration/Haptic/
+ADB Sideload/
+MTP/
+Flashlight/
+Synced with the latest Teamwin changes/
+Designed with latest Material design 2 guidelines/
+Implemented support for Flyme and MIUI OTA, and incremental block-based OTA in custom ROMs/
+Included assorted customizations/
+Inbuilt patches, like Magisk and password reset patch/
+Several addons/
+Password protection/
+Fully open-source/
+Frequently updated/
+# Why OrangeFox Recovery?
+We have been operating since early 2018. Since then we have improved the quality, stability, and device support of the recovery. Today OrangeFox is the leader in stability, UI design, and UX. Installing OrangeFox means being with the latest code and fastest fixes.
+
+OrangeFox Recovery was originally designed for Xiaomi Redmi Note 4X Snapdragon (mido). Right now we support 50+ devices, with more than 5 million downloads from our official download server.
+
 
 ## Release Notes
 ```
