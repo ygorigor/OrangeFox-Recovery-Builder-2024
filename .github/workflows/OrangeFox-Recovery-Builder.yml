@@ -134,6 +134,7 @@ jobs:
         if [ -f out/target/product/${{ github.event.inputs.DEVICE_NAME }}/OrangeFox*.img ]; then
             echo "CHECK_IMG_IS_OK=true" >> $GITHUB_ENV
             echo "MD5_IMG=$(md5sum out/target/product/${{ github.event.inputs.DEVICE_NAME }}/OrangeFox*.img | cut -d ' ' -f 1)" >> $GITHUB_ENV
+            mv OrangeFox*.img recovery.img
         else
             echo "Recovery out directory is empty."
         fi
@@ -149,7 +150,6 @@ jobs:
         if [ ${{ github.event.inputs.RECOVERY_INSTALLER }} = true ]; then
           cd OrangeFox/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/
           wget https://github.com/kinguser981/recovery-installer/releases/download/zip/recovery-installer.zip
-          mv OrangeFox*.img recovery.img
           zip -ur recovery-installer.zip recovery.img
         fi
       continue-on-error: true
@@ -158,7 +158,6 @@ jobs:
       run: |
         if [ ${{ github.event.inputs.RECOVERY_TAR }} = true ]; then
           cd OrangeFox/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/
-          mv OrangeFox*.img recovery.img
           tar -cvf recovery.tar recovery.img
         fi
       continue-on-error: true
