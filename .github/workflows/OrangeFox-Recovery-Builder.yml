@@ -179,6 +179,7 @@ jobs:
           Commit: Most recent [commit](${{ github.event.inputs.DEVICE_TREE }}/commit/${{ env.COMMIT_ID }}) during building.
           MD5 (img): ${{ env.MD5_IMG }}
           MD5 (zip): ${{ env.MD5_ZIP }}
+          MD5 (zip): ${{ env.MD5_TAR }}
           
     - name: Release ramdisk-recovery
       uses: softprops/action-gh-release@4634c16e79c963813287e889244c50009e7f0981
