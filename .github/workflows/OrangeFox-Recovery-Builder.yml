@@ -137,9 +137,9 @@ jobs:
         else
             echo "Recovery out directory is empty."
         fi
-        if [ -f out/target/product/${{ github.event.inputs.DEVICE_NAME }}/OrangeFox*.zip ]; then
+        if [ -f out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery-installer.zip ]; then
             echo "CHECK_ZIP_IS_OK=true" >> $GITHUB_ENV
-            echo "MD5_ZIP=$(md5sum out/target/product/${{ github.event.inputs.DEVICE_NAME }}/OrangeFox*.zip | cut -d ' ' -f 1)" >> $GITHUB_ENV
+            echo "MD5_ZIP=$(md5sum out/target/product/${{ github.event.inputs.DEVICE_NAME }}/recovery-installer.zip | cut -d ' ' -f 1)" >> $GITHUB_ENV
         else
             echo "Recovery out directory is empty."
         fi
