@@ -137,7 +137,6 @@ jobs:
         else
             echo "Recovery out directory is empty."
         fi
-      continue-on-error: true
 
     - name: Rename the Recovery 
       run: |
