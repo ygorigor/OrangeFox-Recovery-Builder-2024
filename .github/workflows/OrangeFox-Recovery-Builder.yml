@@ -63,7 +63,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-              
+
+    - name: Display Inputs
+      run: |
+        echo "::group::User Environment Variables"
+        echo "Displaying variables/inputs."
+        echo "Include Recovery Installer: ${{ github.event.inputs.RECOVERY_INSTALLER }}"
+        echo "Release recovery.tar For Samsung devices: ${{ github.event.inputs.RECOVERY_TAR }}"
+        echo "::endgroup::"
+
     - name: Clean-up
       uses: rokibhasansagar/slimhub_actions@main
 
@@ -134,6 +142,23 @@ jobs:
             echo "Recovery out directory is empty."
         fi
 
+    - name: Include Recovery Installer
+      run: |
+        if [ ${{ github.event.inputs.RECOVERY_INSTALLER }} = true ]; then
+          cd workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/
+          wget https://github.com/kinguser981/recovery-installer/releases/download/zip/recovery-installer.zip
+          zip -ur recovery-installer.zip recovery.img
+        fi
+      continue-on-error: true
+        
+    - name: Recovery to tar for Samsung devices
+      run: |
+        if [ ${{ github.event.inputs.RECOVERY_TAR }} = true ]; then
+          cd workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/
+          tar -cvf recovery.tar recovery.img
+        fi
+      continue-on-error: true
+
     - name: Upload to Release
       if: env.CHECK_IMG_IS_OK == 'true' && env.CHECK_ZIP_IS_OK == 'true'
       uses: softprops/action-gh-release@v1
@@ -149,6 +174,7 @@ jobs:
           Commit: Most recent [commit](${{ github.event.inputs.DEVICE_TREE }}/commit/${{ env.COMMIT_ID }}) during building.
           MD5 (img): ${{ env.MD5_IMG }}
           MD5 (zip): ${{ env.MD5_ZIP }}
+          
     - name: Release ramdisk-recovery
       uses: softprops/action-gh-release@4634c16e79c963813287e889244c50009e7f0981
       with:
