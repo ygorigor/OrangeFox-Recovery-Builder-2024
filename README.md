@@ -1,13 +1,12 @@
-# compile Custom Recovery with Github Actions
+# compile OrangeFox Recovery with Github Actions
 ```
-only Supports TWRP  14 / 12.1 / 11 / 9.0
+only Supports OrangeFox   12.1 / 11 
 ```
+![cap_sprout](https://wiki.orangefox.tech/banner.svg)
 ---
 
 ## Release Notes
 ```
-= 2024-09-22
-- Now Supports TWRP 14
 
 
 = 2024-09-05
@@ -68,6 +67,7 @@ Can be downloaded at [Release](../../releases)
 ## Reference and Credits
 - https://github.com/that1
 - https://github.com/TeamWin
+- https://gitlab.com/OrangeFox
 - https://github.com/CaptainThrowback
 - https://github.com/cd-Crypton
 - https://github.com/azwhikaru
