@@ -124,9 +124,9 @@ jobs:
         set -e
         ${{ steps.fox_branch.outputs.value }}
 
-    - name: Set Build Date # For Build Date Info, currently using Asia/Manila
+    - name: Set Build Date # Output will be use in Release
       run: |
-        echo "BUILD_DATE=$(TZ=Asia/Manila date +%Y%m%d)" >> $GITHUB_ENV
+        echo "BUILD_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
 
     - name: Check if Recovery Exist
       run: |
