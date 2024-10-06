@@ -155,7 +155,7 @@ jobs:
         echo "RECOVERY_TYPE=vendor_boot" >> $GITHUB_ENV
         echo "vendor_boot.img file found!"
         else
-        echo "No recovery file found!"
+        echo "No Recovery file found!"
         fi
       continue-on-error: true
       
