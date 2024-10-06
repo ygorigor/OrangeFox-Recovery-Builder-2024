@@ -35,23 +35,20 @@ OrangeFox Recovery was originally designed for Xiaomi Redmi Note 4X Snapdragon (
 
 ## Release Notes
 ```
-
-
-= 2024-09-05
+= 2024-10-06
+- fix some errors
+- fix problems with vendor_boot
 - Include Recovery to tar for Samsung devices
 - Include recovery installer zip
 - LDCheck for checking missing dependencies.
-- TWRP Allow non-Github/Gitlab remotes for device trees
 - Clarify options in README
 - Increase swap size for kernel inline builds
 - Remove common tree input fields (not needed)
 - Fix build with Omni manifests
-- Update to ubuntu-20.04
-- Updated to work with Android 12.1 AOSP minimal TWRP manifest
+- Update ubuntu to latest version 
+- Updated to work with Android 14 AOSP minimal TWRP manifest
 - Completely reconstruct the use logic to reduce the difficulty of use
 - Optimize the parameter transfer part, now you can run multiple Workers at the same time
-- TWRP compilation test passed
-
 ```
 
 -----
