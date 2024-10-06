@@ -164,6 +164,7 @@ jobs:
           cd OrangeFox/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/
           wget https://github.com/kinguser981/recovery-installer/releases/download/zip/recovery-installer.zip
           zip -ur recovery-installer.zip ${{ env.RECOVERY_TYPE }}.img
+          echo "MD5_ZIP=$(md5sum ${{ env.RECOVERY_TYPE }}.img | cut -d ' ' -f 1)" >> $GITHUB_ENV
         fi
       continue-on-error: true
         
@@ -172,6 +173,7 @@ jobs:
         if [ ${{ github.event.inputs.RECOVERY_TAR }} = true ]; then
           cd OrangeFox/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/
           tar -cvf ${{ env.RECOVERY_TYPE }}.tar ${{ env.RECOVERY_TYPE }}.img
+          echo "MD5_TAR=$(md5sum ${{ env.RECOVERY_TYPE }}.img | cut -d ' ' -f 1)" >> $GITHUB_ENV
         fi
       continue-on-error: true
 
@@ -189,9 +191,6 @@ jobs:
           Build: ${{ github.event.inputs.MANIFEST_BRANCH }}
           Device: [Device Tree/Branch](${{ github.event.inputs.DEVICE_TREE }}/tree/${{ github.event.inputs.DEVICE_TREE_BRANCH }})
           Commit: Most recent [commit](${{ github.event.inputs.DEVICE_TREE }}/commit/${{ env.COMMIT_ID }}) during building.
-          MD5 (img): ${{ env.MD5_IMG }}
-          MD5 (zip): ${{ env.MD5_ZIP }}
-          MD5 (tar): ${{ env.MD5_TAR }}
           
     - name: Release ramdisk-recovery
       if: env.CHECK_IMG_IS_OK == 'true'
