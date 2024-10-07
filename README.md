@@ -54,7 +54,7 @@ OrangeFox Recovery was originally designed for Xiaomi Redmi Note 4X Snapdragon (
 -----
 
 ## Output will be like this
-![](https://s3.bmp.ovh/imgs/2024/09/07/17b331e17bc4ccd9.png)
+![](https://s3.bmp.ovh/imgs/2024/10/07/3913c62d5c20649f.png)
 
 ## Parameter Description
 | Name | Description | Example |
@@ -77,10 +77,10 @@ OrangeFox Recovery was originally designed for Xiaomi Redmi Note 4X Snapdragon (
 ![](https://s3.bmp.ovh/imgs/2024/09/07/acd37b59bde6971e.png)
 #### 2. After waiting for the automatic redirection, you will see your own username
 ## Building the Recovery
-#### 3. Click on 'Actions' then Click no 'TWRP Recovery Builder 2024'
-![](https://s3.bmp.ovh/imgs/2024/09/07/4e0db9b997ea3522.png)
+#### 3. Click on 'Actions' then Click no 'OrangeFox - Build'
+![](https://s3.bmp.ovh/imgs/2024/10/07/fc95db719a8603e4.png)
 #### 4. Click 'Run workflow', choose the branch for the recovery that you want to build, and fill in according to the above 'Parameter Description'
-![](https://s3.bmp.ovh/imgs/2024/09/07/29a2d0acf63c6e4f.png)
+![](https://s3.bmp.ovh/imgs/2024/10/08/b0914297dd7ec359.png)
 #### 5. After filling in, click 'Run workflow' to start running
 
 -----
