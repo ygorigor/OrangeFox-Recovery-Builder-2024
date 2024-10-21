@@ -67,7 +67,7 @@ OrangeFox Recovery was originally designed for Xiaomi Redmi Note 4X Snapdragon (
 | `DEVICE_TREE_BRANCH` | Device branch that you want to use for build (typically corresponds to the manifest branch) | android-12.1 |
 | `DEVICE_PATH` | Device tree location for syncing, relative to workspace root (usually listed as "LOCAL_PATH" or "DEVICE_PATH" in BoardConfig.mk) | device/samsung/a05s |
 | `DEVICE_NAME` | Model name (same as twrp_`<DEVICE_NAME>`.mk from device tree) | a05s |
-| `DEVICE_MAKEFILE` | Name of device-specific makefile from tree (format: `<PREFIX>_<DEVICE_NAME>`) | twrp_a05s
+| `DEVICE_MAKEFILE` | Name of device-specific makefile from tree (format: `<PREFIX>_<DEVICE_NAME>`) | fox_a05s.mk
 | `BUILD_TARGET` | Build Target Partition (boot/recovery/vendor_boot) | recovery |
 | `RECOVERY_INSTALLER` | Include recovery installer zip | Optional |
 | `RECOVERY_TAR` | Recovery to tar for Samsung devices | Optional |
