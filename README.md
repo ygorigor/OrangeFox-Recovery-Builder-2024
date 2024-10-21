@@ -35,6 +35,9 @@ OrangeFox Recovery was originally designed for Xiaomi Redmi Note 4X Snapdragon (
 
 ## Release Notes
 ```
+= 2024-10-21
+- Fix issue with Snapdragon Gen 7 devices
+
 = 2024-10-06
 - fix some errors
 - fix problems with vendor_boot
